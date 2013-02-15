@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Hello World</title>
+</h:head>
+
+<h:body>
+	<f:event listener="#{inputOutputBean.displayPage()}" type="preRenderView"/>
+	
+	<h:form>
+
+		<div style="width: 400px; font-family: Arial; font-size: 9pt;">
+		<table>
+			<tr>
+				<td colspan="2" style="padding-bottom: 10px;">
+				<h2>Hello World</h2>
+				<h3>Page: <b>Input/Output</b></h3>
+				</td>
+			</tr>
+			<tr>
+				<td>Type your name:</td>
+				<td><h:inputText id="name" value="#{inputOutputBean.name}" /></td>
+			</tr>
+			<tr>
+				<td>Your name is:</td>			
+				<td><b><h:outputText id="output" value="#{inputOutputBean.output}"/></b></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<h:commandButton value="OK">
+						<f:ajax execute="name" render="output" />
+					</h:commandButton>
+				</td>
+			</tr>
+		</table>
+		</div>
+
+	</h:form>
+</h:body>
+
+</html>
