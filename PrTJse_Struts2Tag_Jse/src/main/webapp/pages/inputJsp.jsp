@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<s:form action="inputOkAction" method="POST">
+<s:form action="inputAction_handleOkButton" method="POST">
 <div style="width: 400px; font-family: Arial; font-size: 9pt;">
 	<table>
 		<tr>
@@ -22,7 +22,7 @@
 		</tr>
 		<tr>
 			<td>
-				<s:textfield name="nameInput" label="Type your name"/>
+				<s:textfield name="name" label="Type your name"/>
 			</td>
 		</tr>
 		<tr>

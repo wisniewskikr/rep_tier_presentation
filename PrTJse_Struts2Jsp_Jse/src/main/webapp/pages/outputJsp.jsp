@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<form action="outputBackAction" method="post">
+<form action="outputAction_handleBackButton" method="post">
 <div style="width: 400px; font-family: Arial; font-size: 9pt;">
 	
 	<table>
@@ -21,7 +21,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2">Hello World <b>${requestScope.nameOutput}</b></td>
+			<td colspan="2">Hello World <b>${requestScope.name}</b></td>
 		</tr>
 		<tr>
 			<td colspan="2">

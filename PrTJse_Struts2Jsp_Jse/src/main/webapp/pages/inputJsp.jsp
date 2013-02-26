@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<form action="inputOkAction" method="post">
+<form action="inputAction_handleOkButton" method="post">
 <div style="width: 400px; font-family: Arial; font-size: 9pt;">
 	<table>
 		<tr>
@@ -21,7 +21,7 @@
 		</tr>
 		<tr>
 			<td>Type your name:</td>
-			<td><input type="text" id="nameInput" name="nameInput" size="10"/></td>
+			<td><input type="text" id="name" name="name" size="10"/></td>
 		</tr>
 		<tr>
 			<td colspan="2">

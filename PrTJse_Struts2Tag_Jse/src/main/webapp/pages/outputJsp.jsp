@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<s:form action="outputBackAction" method="POST">
+<s:form action="outputAction_handleBackButton" method="POST">
 <div style="width: 400px; font-family: Arial; font-size: 9pt;">
 	
 	<table>
@@ -22,7 +22,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2">Hello World <b><s:property value="nameOutput" /></b></td>
+			<td colspan="2">Hello World <b><s:property value="name" /></b></td>
 		</tr>
 		<tr>
 			<td colspan="2">

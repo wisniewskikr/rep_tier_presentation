@@ -10,15 +10,23 @@
 	<package name="init" namespace="/" extends="struts-default">
 		
 		<action name="init">
-			<result>pages/inputJsp.jsp</result>
+			 <result type="chain">inputAction_displayPage</result>
 		</action>
 		
-		<action name="inputOkAction" class="pl.kwi.actions.InputOkAction">
+		<action name="inputAction_displayPage" class="pl.kwi.actions.InputAction" method="displayPage">
+			<result name="SUCCESS">pages/inputJsp.jsp</result>
+		</action>
+		
+		<action name="inputAction_handleOkButton" class="pl.kwi.actions.InputAction" method="handleOkButton">
+			<result name="SUCCESS" type="chain">outputAction_displayPage</result>
+		</action>
+				
+		<action name="outputAction_displayPage" class="pl.kwi.actions.OutputAction" method="displayPage">
 			<result name="SUCCESS">pages/outputJsp.jsp</result>
 		</action>
 		
-		<action name="outputBackAction" class="pl.kwi.actions.OutputBackAction">			
-			<result name="SUCCESS">pages/inputJsp.jsp</result>
+		<action name="outputAction_handleBackButton" class="pl.kwi.actions.OutputAction" method="handleBackButton">			
+			<result name="SUCCESS" type="chain">inputAction_displayPage</result>
 		</action>
 		
 	</package>
